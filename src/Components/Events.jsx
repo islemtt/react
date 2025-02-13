@@ -38,7 +38,7 @@ const Events = () => {
     };
 
     return (
-        <>
+        <> 
             {showWelcome && <Alert variant="success">Hey welcome to Esprit Events</Alert>}
             <Row>
                 {events.map((event, index) => (

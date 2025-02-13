@@ -26,7 +26,7 @@ const Event = ({ name, img, price, nbTickets, nbParticipants, like, bookEvent, t
                     <Card.Text>Price : {price} </Card.Text>
                     <Card.Text>Number of tickets: {nbTickets}</Card.Text>
                     <Card.Text>Number of participants : {nbParticipants}</Card.Text>
-
+ 
                     {/* Bouton de réservation */}
                     <Button onClick={handleBooking} disabled={nbTickets === 0} className="me-2">
                         {"Book an event"} 

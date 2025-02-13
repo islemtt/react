@@ -15,6 +15,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Events from "./Components/Events"
 import List from "./List"
+import Products from "./Components/Products"
 // function App() {
 //   return(
 //     <>
@@ -152,8 +153,9 @@ function App() {
 //       )}
 <>
 
-<h2>Event management</h2>
-<Events/>
+{/* <h2>Event management</h2>
+<Events/> */}
+<Products/>
     </>
   );
   
