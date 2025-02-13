@@ -8,29 +8,31 @@ import UserGreeting from "./UserGreeting"
 
 
 import { useState } from "react";
-import { findLongestWord, countOccurrences, calculateTotalMarks } from "./Ecmascript"; // Import functions
-import { Search, addEntry } from "./Ecmascript/Fonction"; // Import search and addEntry functions
+ import { findLongestWord, countOccurrences, calculateTotalMarks } from "./ecma"; // Import functions
+import { Search, addEntry } from "./ecmascript/ecma"; // Import search and addEntry functions
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
-//function App() {
-  return(
-    <>
-    <Header/>
-    <Food/>
-    <Card/>
-    <Button/>
-    <UserGreeting isLoggedIn={false} username="islem" />
-    <Student name="SpongeBob" age={20} isStudent={true}/>
-    <Student name="Patrick" age={35} isStudent={false}/>
-    <Student name="Islem" age={22} isStudent={true}/>
-    <Student name="Asma" age={17} isStudent={true}/>
-    <Student name="3ezedine" age={80} isStudent={false}/>
+//import "./App.css";
+import List from "./List"
+// function App() {
+//   return(
+//     <>
+//     <Header/>
+//     <Food/>
+//     <Card/>
+//     <Button/>
+//     <UserGreeting isLoggedIn={true} username="islem" />
+//     <Student name="SpongeBob" age={20} isStudent={true}/>
+//     <Student name="Patrick" age={35} isStudent={false}/>
+//     <Student name="Islem" age={22} isStudent={true}/>
+//     <Student name="Asma" age={17} isStudent={true}/>
+//     <Student name="3ezedine" age={80} isStudent={false}/>
+//     <List/>
 
-    <Footer/>
-    </>
-  );
-//}
+//     <Footer/>
+//     </>
+//   );
+// }
 function App() {
   const [count, setCount] = useState(0);
   const [longestWord, setLongestWord] = useState(""); // State for the longest word
