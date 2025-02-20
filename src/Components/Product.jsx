@@ -40,7 +40,7 @@ const Product = ({ name, img, price, quantity, description, buyProduct }) => {
                     </Card.Text>
  
                     {/* Purchase Button */}
-                    <Button onClick={handlePurchase} disabled={quantity === 0} className="me-2">
+                    <Button  onClick={handlePurchase} disabled={quantity === 0} className="buy">
                         Buy Product
                     </Button>
 

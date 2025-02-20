@@ -1,10 +1,10 @@
-import Header from "./Header"
-import Footer from "./Footer"
-import Food from "./Food"
-import Card from "./Card"
+import Header from "./Components/Header"
+import Footer from "./Components/Footer"
+import Food from "./Components/Food"
+import Card from "./Components/Card"
 import Button from "./Button/Button"
-import Student from "./Sudent"
-import UserGreeting from "./UserGreeting"
+import Student from "./Components/Sudent"
+import UserGreeting from "./Components/UserGreeting"
 
 
 import { useState } from "react";
@@ -14,8 +14,10 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Events from "./Components/Events"
-import List from "./List"
+import List from "./Components/List"
 import Products from "./Components/Products"
+import MyComponent from "./Components/MyComponent"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 // function App() {
 //   return(
 //     <>
@@ -36,6 +38,7 @@ import Products from "./Components/Products"
 //   );
 // }
 function App() {
+  
 //   const [count, setCount] = useState(0);
 //   const [longestWord, setLongestWord] = useState(""); // State for the longest word
 //   const [occurrences, setOccurrences] = useState(null); // State for occurrences
@@ -95,6 +98,8 @@ function App() {
 //   };
 
   return (
+   
+  
 //     <>
 //       <div>
 //         <a href="https://vite.dev" target="_blank">
@@ -152,13 +157,29 @@ function App() {
 //         </div>
 //       )}
 <>
+<Header/>
+<Routes>
+    <Route path="/about" element={<Food />} />
+    <Route path="/mycomponent" element={<MyComponent />} />
+    <Route path="/products" element={<Products />} />
+    <Route path="/services" element={<Card />} />
+    <Route path="/student" element={<Student/>} />
+  </Routes>
+  <Footer/>
+  
 
 {/* <h2>Event management</h2>
 <Events/> */}
-<Products/>
+{/* <Products/>
+
+<MyComponent/> */}
     </>
-  );
+   
+);
   
+  
+
 }
+
 
 export default App

@@ -1,4 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Main container styles */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,19 +8,23 @@
   text-align: center;
 }
 
+/* Logo styles */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Logo spin animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -34,10 +40,144 @@
   }
 }
 
+/* Card styles */
 .card {
   padding: 2em;
+  border-radius: 15px; /* Rounding the corners */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: pink; /* Background color for the card */
 }
 
+.card:hover {
+  transform: translateY(-10px); /* Lift the card */
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2); /* Bigger shadow */
+}
+
+/* Set image styles for uniformity */
+.card-img-top {
+  object-fit: cover;
+  height: 250px; /* Taller image */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Card title styling */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333; /* Dark color */
+}
+
+/* Price and quantity text style */
+.card-text {
+  font-size: 1.1rem;
+  color: #555; /* Lighter gray */
+  margin: 5px 0;
+}
+
+/* Styling for the "Likes" section */
+.card-text.likes {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Styling for the "Read the Docs" section */
 .read-the-docs {
   color: #888;
+}
+
+/* Styling for like/dislike buttons */
+button {
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  text-transform: uppercase; /* Capitalized text */
+  cursor: pointer;
+  border: none;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+/* Like Button */
+button.like {
+  background-color: #4caf50; /* Green for like */
+  color: #fff;
+  border: 2px solid #4caf50;
+}
+
+button.like:hover {
+  background-color: #45a049;
+  border: 2px solid #388e3c;
+  transform: translateY(-3px); /* Lift effect */
+}
+
+button.like:active {
+  background-color: #388e3c;
+  transform: translateY(0); /* Reset lift */
+}
+
+/* Dislike Button */
+button.dislike {
+  background-color: #f44336; /* Red for dislike */
+  color: #fff;
+  border: 2px solid #f44336;
+}
+
+button.dislike:hover {
+  background-color: #e53935;
+  border: 2px solid #c62828;
+  transform: translateY(-3px); /* Lift effect */
+}
+
+button.dislike:active {
+  background-color: #c62828;
+  transform: translateY(0); /* Reset lift */
+}
+
+/* Buy Product Button (Updated to Purple) */
+button.buy {
+  background-color: #9c27b0; /* Purple for Buy Product */
+  color: #fff;
+  border: 2px solid #9c27b0;
+}
+
+button.buy:hover {
+  background-color: #8e24aa;
+  border: 2px solid #7b1fa2;
+  transform: translateY(-3px); /* Lift effect */
+}
+
+button.buy:active {
+  background-color: #7b1fa2;
+  transform: translateY(0); /* Reset lift */
+}
+
+/* Alert message styling */
+.alert {
+  margin-bottom: 20px;
+  background-color: #920038; /* Deep red for alert */
+  color: #fff;
+  border: 1px solid #40021a;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+}
+
+.alert:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+  background-color: #2a020b; /* Darker red on hover */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
