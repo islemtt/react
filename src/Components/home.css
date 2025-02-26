@@ -1,0 +1,75 @@
+/* home.css */
+
+/* Main container with background color */
+.home-container {
+    background-color: #f3f4f6;  /* Light grey background for the whole page */
+    padding: 40px;
+    border-radius: 8px;
+  }
+  
+  /* Hero section with a different background color */
+  .home-title {
+    background-color: #1e40af;  /* Blue background for the hero section */
+    padding: 40px;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .home-title h1 {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  
+  .highlight-text {
+    color: #ffcc00; /* Yellow color for the highlighted text */
+  }
+  
+  .home-content {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    color: #e5e7eb;  /* Light grey text */
+  }
+  
+  .btn-start {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #ffcc00;  /* Yellow button */
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-start:hover {
+    background-color: #d4b000; /* Darker yellow when hovering */
+  }
+  
+  /* Features Section with distinct background colors for each box */
+  .features-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    max-width: 100%;
+  }
+  
+  .feature-box {
+    padding: 20px;
+    background-color: #ffffff;  /* White background for each feature box */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-box h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .feature-box p {
+    color: #666;
+  }
+  

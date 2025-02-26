@@ -6,6 +6,7 @@ import Button from "./Button/Button"
 import Student from "./Components/Sudent"
 import UserGreeting from "./Components/UserGreeting"
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { useState } from "react";
  import { findLongestWord, countOccurrences, calculateTotalMarks } from "./ecma"; // Import functions
@@ -18,6 +19,9 @@ import List from "./Components/List"
 import Products from "./Components/Products"
 import MyComponent from "./Components/MyComponent"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import NotFound from "./Components/NotFound"
+import Home from "./Components/Home"
+import { Navbar } from "react-bootstrap"
 // function App() {
 //   return(
 //     <>
@@ -157,13 +161,15 @@ function App() {
 //         </div>
 //       )}
 <>
-<Header/>
+<Navbar/>
 <Routes>
+    <Route path="/" element={<Home />} />
     <Route path="/about" element={<Food />} />
     <Route path="/mycomponent" element={<MyComponent />} />
     <Route path="/products" element={<Products />} />
     <Route path="/services" element={<Card />} />
     <Route path="/student" element={<Student/>} />
+    <Route path="/*" element={<NotFound/>} />
   </Routes>
   <Footer/>
   
