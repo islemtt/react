@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, Col, Button, Alert } from 'react-bootstrap';
 
-const Event = ({ name, img, price, nbTickets, nbParticipants, like, bookEvent, toggleLike }) => {
-    const [message, setMessage] = useState('');
-
-    // Define a default "sold out" image
+const Event = ({ id, name, img, price, nbTickets, nbParticipants, like, bookEvent, toggleLike, handleDeleteEvent }) => {
     const soldOutImage = '/images/sold_out.png'; 
-
-    const handleBooking = () => {
-        if (nbTickets > 0) {
-            bookEvent();
-            setMessage("You have booked an event");
-            setTimeout(() => setMessage(''), 2000);
-        }
-    };
-
     const imageToDisplay = nbTickets === 0 ? soldOutImage : img;
 
     return (
@@ -26,19 +14,19 @@ const Event = ({ name, img, price, nbTickets, nbParticipants, like, bookEvent, t
                     <Card.Text>Price : {price} </Card.Text>
                     <Card.Text>Number of tickets: {nbTickets}</Card.Text>
                     <Card.Text>Number of participants : {nbParticipants}</Card.Text>
- 
-                    {/* Bouton de réservation */}
-                    <Button onClick={handleBooking} disabled={nbTickets === 0} className="me-2">
+
+                    {/* Booking Button */}
+                    <Button onClick={bookEvent} disabled={nbTickets === 0} className="me-2">
                         {"Book an event"} 
                     </Button>
 
-                    {/* Bouton Like/Dislike */}
+                    {/* Delete Button */}
+                    <button onClick={() => handleDeleteEvent(id)}>Delete Event</button>
+
+                    {/* Like/Dislike Button */}
                     <Button variant={like ? "danger" : "success"} onClick={toggleLike}>
                         {like ? "Dislike" : "Like"}
                     </Button>
-
-                    {/* Message de confirmation */}
-                    {message && <Alert variant="success" className="mt-2">{message}</Alert>}
                 </Card.Body>
             </Card>
         </Col>

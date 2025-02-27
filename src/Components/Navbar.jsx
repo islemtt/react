@@ -11,14 +11,16 @@ const NavigationBar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item>
-            <Nav.Link as={NavLink} to="/" exact activeClassName="active">
-              Accueil
-            </Nav.Link>
+          <Nav.Link as={NavLink} to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+  Accueil
+</Nav.Link>
+
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link as={NavLink} to="/produits" activeClassName="active">
-              Produits
-            </Nav.Link>
+          <Nav.Link as={NavLink} to="/produits" className={({ isActive }) => (isActive ? 'active' : '')}>
+  Produits
+</Nav.Link>
+
           </Nav.Item>
           <Nav.Item>
             <Nav.Link as={NavLink} to="/evenements" activeClassName="active">

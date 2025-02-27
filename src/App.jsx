@@ -162,14 +162,18 @@ function App() {
 //       )}
 <>
 <Navbar/>
+{/* <NavigationBar /> */}
+
 <Routes>
     <Route path="/" element={<Home />} />
+    <Route path="/nav" element={<Navbar />} />
     <Route path="/about" element={<Food />} />
     <Route path="/mycomponent" element={<MyComponent />} />
     <Route path="/products" element={<Products />} />
     <Route path="/services" element={<Card />} />
     <Route path="/student" element={<Student/>} />
-    <Route path="/*" element={<NotFound/>} />
+    <Route path="/events" element={<Events/>} />
+    <Route path="*" element={<NotFound/>} />
   </Routes>
   <Footer/>
   
